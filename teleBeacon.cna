@@ -1,0 +1,6 @@
+on beacon_initial {
+   println("New Beacon: " . beacon_info($1, "computer"));
+   $comp = beacon_info($1, "computer");
+   println($comp);
+   exec("python send.py $comp");
+}
